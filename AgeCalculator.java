@@ -12,10 +12,15 @@ public class AgeCalculator {
         int birthYear = scanner.nextInt();
 
         int currentYear = 2026;
-        int age = currentYear - birthYear;
 
-        System.out.println(name + ", you are approximately "
-                + age + " years old.");
+        if (birthYear > currentYear) {
+            System.out.println("Invalid birth year.");
+        } else {
+            int age = currentYear - birthYear;
+
+            System.out.println(name + ", you are approximately "
+                    + age + " years old.");
+        }
 
         scanner.close();
     }
